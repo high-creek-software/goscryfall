@@ -4,6 +4,7 @@ import (
 	"gitlab.com/high-creek-software/goscryfall/cards"
 	"gitlab.com/high-creek-software/goscryfall/endpoint"
 	"gitlab.com/high-creek-software/goscryfall/sets"
+	"gitlab.com/high-creek-software/goscryfall/symbols"
 )
 
 const (
@@ -15,6 +16,7 @@ type Client struct {
 
 	sets.SetRepo
 	cards.CardRepo
+	symbols.SymbolRepo
 }
 
 func NewClient() *Client {
@@ -22,6 +24,7 @@ func NewClient() *Client {
 	c.endpoint = endpoint.NewEndpoint(scryfallBaseURL)
 	c.SetRepo = sets.NewRestSetRepo(c.endpoint)
 	c.CardRepo = cards.NewRestCardRepo(c.endpoint)
+	c.SymbolRepo = symbols.NewRestSymbolRepo(c.endpoint)
 
 	return c
 }

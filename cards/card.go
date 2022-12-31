@@ -1,5 +1,10 @@
 package cards
 
+import (
+	"regexp"
+	"strings"
+)
+
 type Card struct {
 	Object          string        `json:"object"`
 	Id              string        `json:"id"`
@@ -67,4 +72,19 @@ type Card struct {
 	Prices          Prices        `json:"prices"`
 	RelatedUris     RelatedUris   `json:"related_uris"`
 	PurchaseUris    PurchaseUris  `json:"purchase_uris"`
+}
+
+var match = regexp.MustCompile(`{.\/?.?}`)
+
+func (c Card) ParseManaCost() [][]string {
+	parts := strings.Split(c.ManaCost, "//")
+	var res [][]string
+	for _, part := range parts {
+		set := match.FindAllString(part, -1)
+		if len(set) > 0 {
+			res = append(res, set)
+		}
+	}
+
+	return res
 }
