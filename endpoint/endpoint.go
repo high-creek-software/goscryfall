@@ -31,3 +31,14 @@ func (e *Endpoint) NewGetRequest(resource string) (*http.Request, error) {
 
 	return req, nil
 }
+
+func (e *Endpoint) NewGetRequestFull(uri string) (*http.Request, error) {
+	req, err := http.NewRequest(http.MethodGet, uri, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add(headerAccept, applicationJson)
+
+	return req, nil
+}

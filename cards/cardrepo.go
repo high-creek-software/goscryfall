@@ -22,15 +22,22 @@ type RestCardRepo struct {
 }
 
 func (r RestCardRepo) ListCards(setID string, next string) (*endpoint.Response[[]Card], error) {
-	req, err := r.endpoint.NewGetRequest(cardSearchRoute)
-	if err != nil {
-		return nil, err
+	var req *http.Request
+	var err error
+
+	if next == "" {
+		req, err = r.endpoint.NewGetRequest(cardSearchRoute)
+		if err != nil {
+			return nil, err
+		}
+
+		q := url.Values{}
+		q.Add("q", fmt.Sprintf("set:%s", setID))
+
+		req.URL.RawQuery = q.Encode()
+	} else {
+		req, err = r.endpoint.NewGetRequestFull(next)
 	}
-
-	q := url.Values{}
-	q.Add("q", fmt.Sprintf("set:%s", setID))
-
-	req.URL.RawQuery = q.Encode()
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
