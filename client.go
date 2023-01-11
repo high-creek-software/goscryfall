@@ -4,6 +4,7 @@ import (
 	"gitlab.com/high-creek-software/goscryfall/bulk"
 	"gitlab.com/high-creek-software/goscryfall/cards"
 	"gitlab.com/high-creek-software/goscryfall/endpoint"
+	"gitlab.com/high-creek-software/goscryfall/rulings"
 	"gitlab.com/high-creek-software/goscryfall/sets"
 	"gitlab.com/high-creek-software/goscryfall/symbols"
 )
@@ -19,6 +20,7 @@ type Client struct {
 	cards.CardRepo
 	symbols.SymbolRepo
 	bulk.BulkRepo
+	rulings.RulingsRepo
 }
 
 func NewClient() *Client {
@@ -28,6 +30,7 @@ func NewClient() *Client {
 	c.CardRepo = cards.NewRestCardRepo(c.endpoint)
 	c.SymbolRepo = symbols.NewRestSymbolRepo(c.endpoint)
 	c.BulkRepo = bulk.NewRestBulkRepo(c.endpoint)
+	c.RulingsRepo = rulings.NewRestRulingsRepo(c.endpoint)
 
 	return c
 }
