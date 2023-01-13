@@ -25,6 +25,7 @@ type Card struct {
 	ManaCost        string              `json:"mana_cost"`
 	Cmc             float64             `json:"cmc"`
 	TypeLine        string              `json:"type_line"`
+	FlavorText      string              `json:"flavor_text"`
 	OracleText      string              `json:"oracle_text"`
 	Power           string              `json:"power"`
 	Toughness       string              `json:"toughness"`
