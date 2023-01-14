@@ -33,6 +33,8 @@ type Card struct {
 	ColorIndicator  []string            `json:"color_indicator"`
 	ColorIdentity   []string            `json:"color_identity"`
 	Keywords        []interface{}       `json:"keywords"`
+	ProducedMana    []string            `json:"produced_mana"`
+	CardFaces       []CardFace          `json:"card_faces"`
 	AllParts        []AllParts          `json:"all_parts"`
 	Legalities      map[string]Legality `json:"legalities"`
 	Games           []string            `json:"games"`
