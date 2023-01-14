@@ -1,8 +1,8 @@
-package deck_test
+package decks_test
 
 import (
 	"bytes"
-	"gitlab.com/high-creek-software/goscryfall/deck"
+	"gitlab.com/high-creek-software/goscryfall/decks"
 	"log"
 	"testing"
 )
@@ -106,9 +106,9 @@ Sideboard
 func TestUnmarshal(t *testing.T) {
 	buf := bytes.NewBufferString(dinoDeck)
 
-	d, err := deck.Unmarshal("Dinos", buf)
+	d, err := decks.Unmarshal("Dinos", buf)
 	if err != nil {
-		t.Error("error unmarshaling deck", err)
+		t.Error("error unmarshaling decks", err)
 	}
 
 	name := "Gishath, Sun's Avatar"

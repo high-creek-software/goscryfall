@@ -1,4 +1,4 @@
-package deck
+package decks
 
 type Deck struct {
 	Name      string
