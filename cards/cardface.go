@@ -14,4 +14,6 @@ type CardFace struct {
 	ArtistId       string    `json:"artist_id"`
 	IllustrationId string    `json:"illustration_id"`
 	ImageUris      ImageUris `json:"image_uris"`
+	Power          string    `json:"power"`
+	Toughness      string    `json:"toughness"`
 }
