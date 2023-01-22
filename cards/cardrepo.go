@@ -11,17 +11,21 @@ import (
 
 const (
 	cardSearchRoute = "/cards/search"
+
+	UniqueCards  = "cards"
+	UniqueArt    = "art"
+	UniquePrints = "prints"
 )
 
 type CardRepo interface {
-	ListCards(setID string, next string) (*endpoint.Response[[]Card], error)
+	ListCards(setID, uniqueness, next string) (*endpoint.Response[[]Card], error)
 }
 
 type RestCardRepo struct {
 	endpoint *endpoint.Endpoint
 }
 
-func (r RestCardRepo) ListCards(setID string, next string) (*endpoint.Response[[]Card], error) {
+func (r RestCardRepo) ListCards(setID, uniqueness, next string) (*endpoint.Response[[]Card], error) {
 	var req *http.Request
 	var err error
 
@@ -33,6 +37,7 @@ func (r RestCardRepo) ListCards(setID string, next string) (*endpoint.Response[[
 
 		q := url.Values{}
 		q.Add("q", fmt.Sprintf("set:%s", setID))
+		q.Add("unique", uniqueness)
 
 		req.URL.RawQuery = q.Encode()
 	} else {
