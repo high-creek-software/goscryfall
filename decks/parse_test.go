@@ -2,7 +2,7 @@ package decks_test
 
 import (
 	"bytes"
-	"gitlab.com/high-creek-software/goscryfall/decks"
+	"github.com/high-creek-software/goscryfall/decks"
 	"log"
 	"testing"
 )

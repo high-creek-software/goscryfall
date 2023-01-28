@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"gitlab.com/high-creek-software/goscryfall/endpoint"
+	"github.com/high-creek-software/goscryfall/endpoint"
 	"net/http"
 )
 

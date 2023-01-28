@@ -1,12 +1,12 @@
 package goscryfall
 
 import (
-	"gitlab.com/high-creek-software/goscryfall/bulk"
-	"gitlab.com/high-creek-software/goscryfall/cards"
-	"gitlab.com/high-creek-software/goscryfall/endpoint"
-	"gitlab.com/high-creek-software/goscryfall/rulings"
-	"gitlab.com/high-creek-software/goscryfall/sets"
-	"gitlab.com/high-creek-software/goscryfall/symbols"
+	"github.com/high-creek-software/goscryfall/bulk"
+	"github.com/high-creek-software/goscryfall/cards"
+	"github.com/high-creek-software/goscryfall/endpoint"
+	"github.com/high-creek-software/goscryfall/rulings"
+	"github.com/high-creek-software/goscryfall/sets"
+	"github.com/high-creek-software/goscryfall/symbols"
 )
 
 const (

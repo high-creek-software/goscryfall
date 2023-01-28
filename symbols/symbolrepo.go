@@ -3,7 +3,7 @@ package symbols
 import (
 	"encoding/json"
 	"fmt"
-	"gitlab.com/high-creek-software/goscryfall/endpoint"
+	"github.com/high-creek-software/goscryfall/endpoint"
 	"net/http"
 )
 
