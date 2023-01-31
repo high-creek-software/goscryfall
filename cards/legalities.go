@@ -27,7 +27,7 @@ import (
 //	Premodern       Legality `json:"premodern"`
 //}
 
-var legalitiesNameMap = map[string]string{
+var LegalitiesNameMap = map[string]string{
 	"Standard":         "standard",
 	"Future":           "future",
 	"Historic":         "historic",
@@ -49,7 +49,7 @@ var legalitiesNameMap = map[string]string{
 	"Premodern":        "premodern",
 }
 
-var legalitiesKeysMap = map[string]string{
+var LegalitiesKeysMap = map[string]string{
 	"standard":        "Standard",
 	"future":          "Future",
 	"historic":        "Historic",
