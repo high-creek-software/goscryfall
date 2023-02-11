@@ -27,48 +27,70 @@ import (
 //	Premodern       Legality `json:"premodern"`
 //}
 
+const (
+	Standard        = "standard"
+	Future          = "future"
+	Historic        = "historic"
+	Gladiator       = "gladiator"
+	Pioneer         = "pioneer"
+	Explorer        = "explorer"
+	Modern          = "modern"
+	Legacy          = "legacy"
+	Pauper          = "pauper"
+	Vintage         = "vintage"
+	Penny           = "penny"
+	Commander       = "commander"
+	Brawl           = "brawl"
+	HistoricBrawl   = "historicbrawl"
+	Alchemy         = "alchemy"
+	PauperCommander = "paupercommanader"
+	Duel            = "duel"
+	Oldschool       = "oldschool"
+	Premodern       = "premodern"
+)
+
 var LegalitiesNameMap = map[string]string{
-	"Standard":         "standard",
-	"Future":           "future",
-	"Historic":         "historic",
-	"Gladiator":        "gladiator",
-	"Pioneer":          "pioneer",
-	"Explorer":         "explorer",
-	"Modern":           "modern",
-	"Legacy":           "legacy",
-	"Pauper":           "pauper",
-	"Vintage":          "vintage",
-	"Penny":            "penny",
-	"Commander":        "commander",
-	"Brawl":            "brawl",
-	"Historic Brawl":   "historicbrawl",
-	"Alchemy":          "alchemy",
-	"Pauper Commander": "paupercommander",
-	"Duel":             "duel",
-	"Oldschool":        "oldschool",
-	"Premodern":        "premodern",
+	"Standard":         Standard,
+	"Future":           Future,
+	"Historic":         Historic,
+	"Gladiator":        Gladiator,
+	"Pioneer":          Pioneer,
+	"Explorer":         Explorer,
+	"Modern":           Modern,
+	"Legacy":           Legacy,
+	"Pauper":           Pauper,
+	"Vintage":          Vintage,
+	"Penny":            Penny,
+	"Commander":        Commander,
+	"Brawl":            Brawl,
+	"Historic Brawl":   HistoricBrawl,
+	"Alchemy":          Alchemy,
+	"Pauper Commander": PauperCommander,
+	"Duel":             Duel,
+	"Oldschool":        Oldschool,
+	"Premodern":        Premodern,
 }
 
 var LegalitiesKeysMap = map[string]string{
-	"standard":        "Standard",
-	"future":          "Future",
-	"historic":        "Historic",
-	"gladiator":       "Gladiator",
-	"pioneer":         "Pioneer",
-	"explorer":        "Explorer",
-	"modern":          "Modern",
-	"legacy":          "Legacy",
-	"pauper":          "Pauper",
-	"vintage":         "Vintage",
-	"penny":           "Penny",
-	"commander":       "Commander",
-	"brawl":           "Brawl",
-	"historicbrawl":   "Historic Brawl",
-	"alchemy":         "Alchemy",
-	"paupercommander": "Pauper Commander",
-	"duel":            "Duel",
-	"oldschool":       "Oldschool",
-	"premodern":       "Premodern",
+	Standard:        "Standard",
+	Future:          "Future",
+	Historic:        "Historic",
+	Gladiator:       "Gladiator",
+	Pioneer:         "Pioneer",
+	Explorer:        "Explorer",
+	Modern:          "Modern",
+	Legacy:          "Legacy",
+	Pauper:          "Pauper",
+	Vintage:         "Vintage",
+	Penny:           "Penny",
+	Commander:       "Commander",
+	Brawl:           "Brawl",
+	HistoricBrawl:   "Historic Brawl",
+	Alchemy:         "Alchemy",
+	PauperCommander: "Pauper Commander",
+	Duel:            "Duel",
+	Oldschool:       "Oldschool",
+	Premodern:       "Premodern",
 }
 
 type Legality int

@@ -91,3 +91,39 @@ func (c Card) ParseManaCost() [][]string {
 
 	return res
 }
+
+func (c Card) IsBasicLand() bool {
+	return strings.HasPrefix(c.TypeLine, "Basic Land")
+}
+
+func (c Card) IsLand() bool {
+	return strings.HasPrefix(c.TypeLine, "Land")
+}
+
+func (c Card) IsEnchantment() bool {
+	return strings.HasPrefix(c.TypeLine, "Enchantment")
+}
+
+func (c Card) IsCreature() bool {
+	return strings.HasPrefix(c.TypeLine, "Creature")
+}
+
+func (c Card) IsLegendaryCreature() bool {
+	return strings.HasPrefix(c.TypeLine, "Legendary Creature")
+}
+
+func (c Card) IsArtifact() bool {
+	return strings.HasPrefix(c.TypeLine, "Artifact")
+}
+
+func (c Card) IsLegendaryPlaneswalker() bool {
+	return strings.HasPrefix(c.TypeLine, "Legendary Planeswalker")
+}
+
+func (c Card) IsInstant() bool {
+	return strings.HasPrefix(c.TypeLine, "Instant")
+}
+
+func (c Card) IsSorcery() bool {
+	return strings.HasPrefix(c.TypeLine, "Sorcery")
+}
