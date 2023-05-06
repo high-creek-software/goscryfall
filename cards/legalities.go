@@ -43,7 +43,7 @@ const (
 	Brawl           = "brawl"
 	HistoricBrawl   = "historicbrawl"
 	Alchemy         = "alchemy"
-	PauperCommander = "paupercommanader"
+	PauperCommander = "paupercommander"
 	Duel            = "duel"
 	Oldschool       = "oldschool"
 	Premodern       = "premodern"
